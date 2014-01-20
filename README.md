@@ -7,3 +7,7 @@
 * added **config/database.yml** to **.gitignore**
 * changed generators (no stylesheets, no helpers, no javascripts while **rails generate**)
 * and initial commit
+
+### Usage
+
+Just run in console `rails new your_awesome_app_name -T -db postgresql -m https://raw.github.com/vredniy/my-rails-app-template/master/template.rb`
