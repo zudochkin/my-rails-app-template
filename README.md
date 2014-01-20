@@ -3,9 +3,11 @@
 * gem **slim-rails**
 * **HomeController** for root route
 * **README.rdoc** -> **README.md**
-* **:ru** is a default locale
+* **:ru** is a default locale and **russian** gem
 * added **config/database.yml** to **.gitignore**
 * changed generators (no stylesheets, no helpers, no javascripts while **rails generate**)
+* added development gems: **vendorer**, **pry**, **better_errors**, **binding_of_caller**, and **quiet_assets**
+* **vendorer init** for Vendorfile creating
 * and initial commit
 
 ### Usage

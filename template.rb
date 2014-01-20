@@ -18,6 +18,15 @@ gem 'slim-rails'
 
 gem 'russian', '~> 0.6.0'
 
+gem_group :development do
+  gem 'vendorer'
+  gem 'pry'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
+  gem 'quiet_assets'
+end
+
 run 'bundle install'
 
 puts 'Added generators to config/application.rb'
@@ -39,6 +48,8 @@ run 'git init'
 append_file '.gitignore', 'config/database.yml'
 
 run 'cp config/database.yml config/database.yml.example'
+
+run 'vendorer init'
 
 run 'git add .'
 run 'git commit -m "Initial commit"'
