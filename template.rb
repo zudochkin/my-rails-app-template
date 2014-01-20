@@ -16,6 +16,8 @@ EOS
 
 gem 'slim-rails'
 
+gem 'russian', '~> 0.6.0'
+
 run 'bundle install'
 
 puts 'Added generators to config/application.rb'

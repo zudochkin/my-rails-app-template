@@ -12,4 +12,4 @@
 
 Just run in console 
 
-    rails new your_awesome_app_name -T -db postgresql -m https://raw.github.com/vredniy/my-rails-app-template/master/template.rb
+    rails new your_awesome_app_name -T -d postgresql --skip-bundle -m https://raw.github.com/vredniy/my-rails-app-template/master/template.rb
