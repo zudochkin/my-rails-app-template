@@ -9,6 +9,9 @@
 * added development gems: **vendorer**, **pry**, **better_errors**, **binding_of_caller**, and **quiet_assets**
 * **vendorer init** for Vendorfile creating
 * and initial commit
+* **BDD** (optional)
+	* **rspec-rails** gem
+	* **fabrication** gem for fixtures replacement
 
 ### Usage
 
