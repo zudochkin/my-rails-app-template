@@ -30,6 +30,7 @@ inject_into_file 'config/application.rb', after: '# config.i18n.default_locale =
       g.stylesheets false
       g.helper false
       g.javascripts false
+      g.test_framework :rspec, fixtures: false
     end
 EOS
 end
@@ -55,3 +56,34 @@ run 'vendorer init'
 
 run 'git add .'
 run 'git commit -m "Initial commit"'
+
+if yes? 'Is it {T,B}DD time?'
+  say 'Good choice, motherfucker!'
+
+  # gem_group :test do
+  #   gem 'shoulda'
+  # end
+
+  gem_group :development, :test do
+    # TODO: ability to choose factory_girl
+    gem 'fabrication'
+
+    gem 'rspec-rails', '~> 3.0.0.beta'
+  end
+
+  run 'bundle install'
+
+  run 'rails generate rspec:install'
+
+  create_file 'spec/controllers/home_controller_spec.rb', <<-EOS
+require 'spec_helper'
+
+describe HomeController do
+  describe 'GET index' do
+    before { get :index }
+    it { expect(response).to render_template('index') }
+  end
+end
+EOS
+
+end
