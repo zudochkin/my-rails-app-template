@@ -1,12 +1,3 @@
-s = <<EOS
-config.i18n.default_locale = :ru
-
-    config.generators do |g|
-      g.stylesheets false
-      g.helper false
-      g.javascripts false
-    end
-EOS
 
 routes = <<EOS
 Rails.application.routes.draw do
@@ -30,7 +21,18 @@ end
 run 'bundle install'
 
 puts 'Added generators to config/application.rb'
-gsub_file 'config/application.rb', '# config.i18n.default_locale = :de', s
+
+inject_into_file 'config/application.rb', after: '# config.i18n.default_locale = :de' do <<-EOS
+
+    config.i18n.default_locale = :ru
+
+    config.generators do |g|
+      g.stylesheets false
+      g.helper false
+      g.javascripts false
+    end
+EOS
+end
 
 create_file 'README.md', '# Simple rails application template'
 puts 'Added README.md file'
