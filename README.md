@@ -22,3 +22,7 @@ Just run in console
 ### TODOs
 
 * insert `require 'minitest/autorun'` into **spec/spec_helper.rb** for using **shoulda**
+* add **simple_form**
+* add **inherited_resources**
+* disable view specs generator
+* choose devise, cancan, rolify
