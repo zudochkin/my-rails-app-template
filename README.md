@@ -18,3 +18,7 @@
 Just run in console 
 
     rails new your_awesome_app_name -T -d postgresql --skip-bundle -m https://raw.github.com/vredniy/my-rails-app-template/master/template.rb
+
+### TODOs
+
+* insert `require 'minitest/autorun'` into **spec/spec_helper.rb** for using **shoulda**
