@@ -81,6 +81,7 @@ describe HomeController do
   end
 end
 EOS
+end
 
 if yes? 'Simpleform'
   say 'Simple form integration'
