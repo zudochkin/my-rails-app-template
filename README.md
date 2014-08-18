@@ -12,6 +12,8 @@
 * **BDD** (optional)
 	* **rspec-rails** gem
 	* **fabrication** gem for fixtures replacement
+* **simple_form** gem (ooptional)
+* **inherited_resources** gem (optional)
 
 ### Usage
 
@@ -22,7 +24,5 @@ Just run in console
 ### TODOs
 
 * insert `require 'minitest/autorun'` into **spec/spec_helper.rb** for using **shoulda**
-* add **simple_form**
-* add **inherited_resources**
 * disable view specs generator
 * choose devise, cancan, rolify

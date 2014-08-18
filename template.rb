@@ -1,4 +1,3 @@
-
 routes = <<EOS
 Rails.application.routes.draw do
   root 'home#index'
@@ -54,9 +53,6 @@ run 'cp config/database.yml config/database.yml.example'
 
 run 'vendorer init'
 
-run 'git add .'
-run 'git commit -m "Initial commit"'
-
 if yes? 'Is it {T,B}DD time?'
   say 'Good choice, motherfucker!'
 
@@ -86,4 +82,27 @@ describe HomeController do
 end
 EOS
 
+if yes? 'Simpleform'
+  say 'Simple form integration'
+
+  gem 'simple_form'
+
+  run 'bundle install'
+
+  if yes? 'With Bootstrap support'
+    run 'rails generate simple_form:install --bootstrap'
+  else
+    run 'rails generate simple_form:install'
+  end
 end
+
+if yes? 'InheritedResources'
+  say 'InheritedResources integration'
+
+  gem 'inherited_resources'
+
+  run 'bundle install'
+end
+
+run 'git add .'
+run 'git commit -m "Initial commit"'
