@@ -12,7 +12,7 @@
 * **BDD** (optional)
 	* **rspec-rails** gem
 	* **fabrication** gem for fixtures replacement
-* **simple_form** gem (ooptional)
+* **simple_form** gem (optional)
 * **inherited_resources** gem (optional)
 
 ### Usage
